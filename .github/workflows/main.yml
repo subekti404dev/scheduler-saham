@@ -1,0 +1,16 @@
+name: Sheduler Saham
+on: 
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      
+      - uses: actions/checkout@v2
+
+      - name: Install Dependencies
+        run: yarn
+
+      - name: Run The App
+        run: node index.js ${{ secrets.USER }} ${{ secrets.PASS }} ${{ secrets.EMAIL }} ${{ secrets.SYMBOL }}   
