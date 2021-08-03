@@ -1,7 +1,7 @@
 name: Sheduler Saham
 on: 
   schedule:
-    - cron : '0 17 * * 1-5'
+    - cron : '0 10 * * 1-5'
   workflow_dispatch:
 
 jobs:
